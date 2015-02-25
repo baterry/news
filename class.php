@@ -6,7 +6,7 @@ class News extends PDO{
 	const DB_NAME = "news.db";
 	function __construct(){
 		try{
-		$this->_db = new PDO('mysql:host=localhost;dbname=news',"root","");
+		$this->_db = new PDO('mysql:host=localhost;dbname=news',"root","");//здесь вставьте свои реквизиты!!
 		$this->_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 	}catch(PDOException $e){
 		echo $e->errorCode();
